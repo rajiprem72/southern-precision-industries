@@ -101,6 +101,34 @@
       text-decoration: none;
     }
   </style>
+   <style>
+    :root{--accent:#0b5cff;--muted:#6b7280;--bg:#f7f8fb;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:#111}
+    .container{max-width:1100px;margin:0 auto;padding:28px}
+    header.hero{background:#111;color:#fff;position:relative;overflow:hidden}
+    .hero .overlay{background:linear-gradient(90deg, rgba(2,6,23,0.75), rgba(2,6,23,0.45));position:absolute;inset:0}
+    .hero img{width:100%;height:calc(100vh*0.45);object-fit:cover;display:block}
+    .hero .content{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);text-align:center;padding:24px}
+    .hero h1{font-size:clamp(28px,4vw,44px);margin:0 0 8px}
+    .hero p{margin:0;font-size:clamp(14px,1.2vw,18px);color:#dbeafe}
+
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center;margin-top:30px}
+    .card{background:#fff;padding:22px;border-radius:12px;box-shadow:0 6px 20px rgba(15,23,42,0.06)}
+    .small{font-size:14px;color:var(--muted)}
+    ul.bullets{padding-left:20px;margin:12px 0}
+
+    .center{text-align:center}
+    .cta{display:inline-block;margin-top:12px;padding:10px 18px;border-radius:8px;background:var(--accent);color:#fff;text-decoration:none}
+
+    .three{display:flex;gap:18px;margin-top:22px}
+    .three .item{flex:1;background:#fff;padding:18px;border-radius:10px}
+    footer{margin-top:36px;padding:36px 0;text-align:center;color:var(--muted)}
+
+    /* responsive */
+    @media (max-width:880px){.grid{grid-template-columns:1fr}.hero img{height:320px}.three{flex-direction:column}}
+  </style>
+
 </head>
 <body>
   <!-- ======= HEADER START ======= -->
