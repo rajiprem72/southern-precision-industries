@@ -67,16 +67,23 @@
     /* ===== Mobile Menu ===== */
     .menu-toggle {
       display: none;
-      font-size: 26px;
-      color: white;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height: 22px;
       background: none;
       border: none;
       cursor: pointer;
       position: absolute;
-      top: 10px;
+      top: 12px;
       right: 20px;
     }
-
+    .menu-toggle span {
+      display: block;
+      height: 4px;
+      background: white;
+      border-radius: 2px;
+    }
     @media (max-width: 768px) {
       nav ul {
         display: none;
@@ -92,7 +99,7 @@
         margin: 15px 0;
       }
       .menu-toggle {
-        display: block;
+        display: flex;
       }
     }
 
@@ -154,7 +161,11 @@
 
   <!-- ======= NAVIGATION BAR ======= -->
   <nav>
-    <button class="menu-toggle">☰</button>
+    <button class="menu-toggle" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
     <ul id="menu">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About Us</a></li>
