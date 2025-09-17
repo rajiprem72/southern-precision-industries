@@ -136,10 +136,14 @@
       color: #ffcc00;
       text-decoration: none;
     }
-     ul.left-justified {
+  ul.left-justified {
+    list-style-type: none;
     padding-left: 0;
-    margin-left: 0;
-    list-style-position: inside;
+  }
+  ul.left-justified li::before {
+    content: "▪ ";   /* custom bullet */
+    color: #003366;  /* match your theme */
+    font-weight: bold;
   }
   </style>
 </head>
