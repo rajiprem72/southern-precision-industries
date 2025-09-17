@@ -8,28 +8,38 @@
   <meta name="keywords" content="Southern Precision Industries clients, Hyundai, Delphi TVS, Ashok Leyland, Wabco, Brakes India, Lucas TVS, Toshiba, trusted engineering clients, automotive industry clients">
   <meta name="author" content="Southern Precision Industries">
   <link rel="stylesheet" href="styles.css">
-    <style>
+  <style>
     body { font-family: Arial, sans-serif; margin:0; padding:0; }
-    header { background: url('images/clients-banner.jpg') no-repeat center center/cover; color:white; text-align:center; padding:80px 20px; }
-    header h1 { font-size: 2.5rem; margin:0; }
-    header p { font-size: 1.2rem; margin-top:10px; }
+
+    /* Hero banner with client logos */
+    .clients-hero {
+      background: url('images/clients-banner.jpg') no-repeat center center/cover;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+    .clients-hero h1 {
+      font-size: 2.5rem;
+      margin: 0;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+    }
+    .clients-hero p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+    }
+
     section { padding: 50px 20px; max-width: 1100px; margin:auto; }
     .clients-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 30px; align-items: center; text-align:center; }
-    .client-card { padding: 20px; border: 1px solid #eee; border-radius: 8px; transition: transform 0.3s ease; background: #fafafa; }
+    .client-card { padding: 20px; border: 1px solid #eee; border-radius: 8px; background: #fafafa; transition: transform 0.3s ease; }
     .client-card:hover { transform: scale(1.05); }
     .client-card img { max-width: 150px; max-height: 80px; object-fit: contain; }
     .client-card p { font-size: 1rem; font-weight: bold; color:#333; }
-    footer { text-align:center; padding:20px; background:#222; color:white; margin-top:40px; }
-  </style>
 
-   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f4f8fc;
-      color: #333;
-    }
-    header {
+    footer { text-align:center; padding:20px; background:#222; color:white; margin-top:40px; }
+
+    /* Header + Nav reused from your existing design */
+    header.site-header {
       background: #0056b3;
       color: white;
       padding: 15px 30px;
@@ -37,23 +47,11 @@
       justify-content: space-between;
       align-items: center;
     }
-    header .logo-section {
-      display: flex;
-      align-items: center;
-    }
-    header img {
-      height: 60px;
-      margin-right: 15px;
-    }
-    header h1 {
-      font-size: 22px;
-      margin: 0;
-      font-weight: bold;
-    }
-    header .contact {
-      font-size: 16px;
-      font-weight: bold;
-    }
+    header.site-header .logo-section { display: flex; align-items: center; }
+    header.site-header img { height: 60px; margin-right: 15px; }
+    header.site-header h1 { font-size: 22px; margin: 0; font-weight: bold; }
+    header.site-header .contact { font-size: 16px; font-weight: bold; }
+
     nav {
       background: #007bff;
       padding: 10px 0;
@@ -65,64 +63,19 @@
       margin: 0;
       padding: 0;
     }
-    nav ul li {
-      margin: 0 20px;
-    }
+    nav ul li { margin: 0 20px; }
     nav ul li a {
       color: white;
       text-decoration: none;
       font-weight: bold;
       transition: color 0.3s ease;
     }
-    nav ul li a:hover {
-      color: #ffcc00;
-    }
-    main {
-      padding: 50px 20px;
-      max-width: 1100px;
-      margin: auto;
-      text-align: center;
-    }
-    main h2 {
-      color: #0056b3;
-      margin-bottom: 20px;
-    }
-    main p {
-      font-size: 18px;
-      line-height: 1.8;
-    }
-    .cta {
-      margin-top: 30px;
-    }
-    .cta a {
-      display: inline-block;
-      background: #0056b3;
-      color: white;
-      padding: 12px 25px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s ease;
-    }
-    .cta a:hover {
-      background: #003d80;
-    }
-    footer {
-      background: #333;
-      color: white;
-      padding: 20px 0;
-      text-align: center;
-      margin-top: 40px;
-    }
-    footer a {
-      color: #ffcc00;
-      text-decoration: none;
-    }
+    nav ul li a:hover { color: #ffcc00; }
   </style>
 </head>
 <body>
-    <!-- ======= HEADER START ======= -->
-  <header>
+  <!-- ======= HEADER START ======= -->
+  <header class="site-header">
     <div class="logo-section">
       <a href="index.html"><img src="images/logo.jpg" alt="Southern Precision Industries Logo"></a>
       <h1>Southern Precision Industries</h1>
@@ -146,20 +99,22 @@
   </nav>
   <!-- ======= HEADER END ======= -->
 
-  <header>
+  <!-- ======= CLIENT HERO BANNER ======= -->
+  <section class="clients-hero">
     <h1>Trusted by Industry Leaders</h1>
     <p>Southern Precision Industries is proud to serve world-renowned automotive & engineering clients.</p>
-  </header>
+  </section>
 
+  <!-- ======= CLIENT LIST ======= -->
   <section>
     <h2 style="text-align:center; margin-bottom:40px;">Our Esteemed Clients</h2>
     <div class="clients-grid">
-      <div class="client-card"><p>Brakes India Pvt Ltd</p></div>
-      <div class="client-card"><p>TEL Turbo Energy</p></div>
-     </div>
+      <div class="client-card"><img src="images/brakes-india-logo.png" alt="Brakes India Logo"><p>Brakes India Pvt Ltd</p></div>
+      <div class="client-card"><img src="images/tel-turbo-logo.png" alt="TEL Turbo Energy Logo"><p>TEL Turbo Energy</p></div>
+    </div>
   </section>
 
- <!-- ======= FOOTER START ======= -->
+  <!-- ======= FOOTER START ======= -->
   <footer>
     <p>&copy; 2025 Southern Precision Industries. All Rights Reserved.</p>
     <p>
