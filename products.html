@@ -23,7 +23,8 @@
 
   <!-- Canonical -->
   <link rel="canonical" href="https://yourusername.github.io/Southern-Precision-Industries/products.html">
-   <style>
+
+  <style>
     :root{--accent:#0b5cff;--muted:#6b7280;--bg:#f8fafc;font-family:Inter,system-ui,Arial}
     body{margin:0;background:var(--bg);color:#111}
     .container{max-width:1100px;margin:0 auto;padding:28px}
@@ -39,13 +40,15 @@
     img.section-img{width:100%;height:300px;object-fit:cover;border-radius:10px;margin:12px 0}
   </style>
 
-
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background: #f4f8fc;
       color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
     header {
       background: #0056b3;
@@ -54,6 +57,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: relative;
     }
     header .logo-section {
       display: flex;
@@ -72,6 +76,8 @@
       font-size: 16px;
       font-weight: bold;
     }
+
+    /* NAVIGATION */
     nav {
       background: #007bff;
       padding: 10px 0;
@@ -95,11 +101,53 @@
     nav ul li a:hover {
       color: #ffcc00;
     }
+
+    /* HAMBURGER MENU */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 28px;
+      height: 20px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      position: absolute;
+      right: 20px;
+      top: 20px;
+    }
+    .menu-toggle span {
+      display: block;
+      height: 3px;
+      background: red; /* 🔴 red lines */
+      border-radius: 2px;
+    }
+
+    /* MOBILE VIEW */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        display: none;
+        background: #007bff;
+        padding: 10px 0;
+      }
+      nav ul li {
+        margin: 10px 0;
+      }
+      .menu-toggle {
+        display: flex;
+      }
+      nav ul.show {
+        display: flex;
+      }
+    }
+
     main {
       padding: 50px 20px;
       max-width: 1100px;
       margin: auto;
       text-align: center;
+      flex: 1;
     }
     main h2 {
       color: #0056b3;
@@ -131,6 +179,7 @@
       padding: 20px 0;
       text-align: center;
       margin-top: 40px;
+      font-size: 14px;
     }
     footer a {
       color: #ffcc00;
@@ -139,7 +188,7 @@
   </style>
 </head>
 <body>
-    <!-- ======= HEADER START ======= -->
+  <!-- ======= HEADER START ======= -->
   <header>
     <div class="logo-section">
       <a href="index.html"><img src="images/logo.jpg" alt="Southern Precision Industries Logo"></a>
@@ -148,11 +197,16 @@
     <div class="contact">
       📞 <a href="tel:+919444191812" style="color: white; text-decoration: none;">+91 94441 91812</a>
     </div>
+    <button class="menu-toggle" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </header>
 
   <!-- ======= NAVIGATION BAR ======= -->
   <nav>
-    <ul>
+    <ul id="menu">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About Us</a></li>
       <li><a href="mission-vision.html">Mission & Vision</a></li>
@@ -165,7 +219,6 @@
   <!-- ======= HEADER END ======= -->
 
   <header class="hero">
-    <!-- Replace with products-hero.jpg -->
     <img src="images/products-hero.jpg" alt="Southern Precision Industries Products">
     <div class="overlay"></div>
     <div class="content">
@@ -192,7 +245,7 @@
       <img src="images/gauges.jpg" alt="Tools and gauges for precision measurement" class="section-img">
       <p>Our superior quality <strong>Tools & Gauges</strong> are extensively used across automotive and engineering sectors. Known for robust construction, corrosion resistance, and perfect finish, our gauges ensure fine functionality and efficiency. Fabricated using modern technology and high-grade materials, our tools and gauges comply with industry standards and are available in multiple specifications.</p>
       <h3>Features:</h3>
-      <ul style="style="list-style-type: none; text-align: center; padding: 0; margin: 0;"">
+      <ul style="list-style-type: none; text-align: center; padding: 0; margin: 0;">
         <li>Robust Construction</li>
         <li>Corrosion Resistance</li>
         <li>Perfect Finish</li>
@@ -206,7 +259,7 @@
     </section>
   </main>
 
-   <!-- ======= FOOTER START ======= -->
+  <!-- ======= FOOTER START ======= -->
   <footer>
     <p>&copy; 2025 Southern Precision Industries. All Rights Reserved.</p>
     <p>
@@ -219,6 +272,13 @@
   </footer>
   <!-- ======= FOOTER END ======= -->
 
-  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+  <!-- SCRIPT -->
+  <script>
+    const toggle = document.querySelector(".menu-toggle");
+    const menu = document.getElementById("menu");
+    toggle.addEventListener("click", () => {
+      menu.classList.toggle("show");
+    });
+  </script>
 </body>
 </html>
