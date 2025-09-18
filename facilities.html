@@ -3,61 +3,113 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>Manufacturing Facilities | Southern Precision Industries – CNC, Conventional Machines & Quality Instruments</title>
-  <meta name="description" content="Explore the state-of-the-art manufacturing facilities of Southern Precision Industries, including CNC machines, conventional machines, and advanced quality instruments for precision engineering.">
+  <meta name="description" content="Explore the state-of-the-art manufacturing facilities of Southern Precision Industries. Equipped with CNC and conventional machines, precision instruments, and skilled employees ensuring top-class quality.">
+  <meta name="keywords" content="Southern Precision Industries, Facilities, CNC Machines, Conventional Machines, Instruments, Manufacturing Capacity, Chennai Industry, Engineering, Automotive Supply">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Manufacturing Facilities | Southern Precision Industries">
+  <meta property="og:description" content="Southern Precision Industries manufacturing facilities – CNC machining, conventional machining, quality instruments and skilled workforce.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourusername.github.io/Southern-Precision-Industries/facilities.html">
+  <meta property="og:image" content="https://yourusername.github.io/Southern-Precision-Industries/images/facility-hero.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Manufacturing Facilities | Southern Precision Industries">
+  <meta name="twitter:description" content="CNC machining, conventional machining, quality instruments and skilled employees at Southern Precision Industries.">
+  <meta name="twitter:image" content="https://yourusername.github.io/Southern-Precision-Industries/images/facility-hero.jpg">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://yourusername.github.io/Southern-Precision-Industries/facilities.html">
 
   <style>
+    /* Default (desktop) – side by side */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+/* Mobile screens – stack vertically */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header .logo-section {
+    margin-bottom: 10px;
+  }
+
+  header .contact {
+    margin-top: 5px;
+  }
+}
+
+    header img {
+        background: transparent;
+        mix-blend-mode: multiply; /* removes white background visually */
+      }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
+      background: #f4f8fc;
+      color: #333;
     }
-
     header {
+      background: #0056b3;
+      color: white;
+      padding: 15px 30px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 10px 20px;
-      background: white;
-      border-bottom: 2px solid #ddd;
       position: relative;
     }
-
-    .logo-section {
+    header .logo-section {
       display: flex;
       align-items: center;
-      gap: 10px;
     }
-
-    .logo {
-      height: 50px;
-      width: auto;
-      mix-blend-mode: multiply; /* removes white bg */
+    header img {
+      height: 60px;
+      margin-right: 15px;
     }
-
-    .company-name {
-      font-size: 20px;
+    header h1 {
+      font-size: 22px;
+      margin: 0;
       font-weight: bold;
-      color: #333;
     }
-
-    .contact {
+    header .contact {
       font-size: 16px;
       font-weight: bold;
-      color: #333;
     }
 
+    /* Navigation */
+    nav {
+      background: #007bff;
+      padding: 10px 0;
+    }
     nav ul {
       list-style: none;
       display: flex;
-      gap: 20px;
+      justify-content: center;
       margin: 0;
       padding: 0;
     }
-
+    nav ul li {
+      margin: 0 20px;
+    }
     nav ul li a {
+      color: white;
       text-decoration: none;
       font-weight: bold;
-      color: #333;
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover {
+      color: #ffcc00;
     }
 
     /* Hamburger menu */
@@ -65,100 +117,234 @@
       display: none;
       flex-direction: column;
       cursor: pointer;
-      position: absolute;
-      top: 20px;
-      right: 20px;
     }
-
     .menu-toggle span {
-      height: 3px;
-      width: 25px;
-      background: red; /* red lines for visibility */
+      height: 4px;
+      width: 28px;
+      background: red; /* 🔴 red lines */
       margin: 4px 0;
+      border-radius: 2px;
     }
 
-    /* Mobile view */
+    /* Responsive */
     @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        align-items: center; /* center logo + company + phone */
-        position: relative;
-      }
-
-      header .logo-section {
-        margin-bottom: 10px;
-      }
-
-      header .contact {
-        margin-top: 5px;
-      }
-
-      nav {
-        display: none;
-        width: 100%;
-      }
-
-      nav.active {
-        display: block;
-      }
-
       nav ul {
         flex-direction: column;
+        display: none;
+        background: #007bff;
         text-align: center;
-        gap: 10px;
       }
-
+      nav ul.showing {
+        display: flex;
+      }
       .menu-toggle {
-        display: flex; /* show hamburger menu */
+        display: flex;
       }
+    }
+
+    main {
+      padding: 50px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    main h2 {
+      color: #0056b3;
+      margin-bottom: 20px;
+    }
+    main p {
+      font-size: 18px;
+      line-height: 1.8;
+    }
+    .cta {
+      margin-top: 30px;
+    }
+    .cta a {
+      display: inline-block;
+      background: #0056b3;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    .cta a:hover {
+      background: #003d80;
+    }
+    footer {
+      background: #333;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      margin-top: 40px;
+    }
+    footer a {
+      color: #ffcc00;
+      text-decoration: none;
+    }
+
+    /* ✅ Left-justified bullets */
+    ul.left-justified {
+      list-style-type: disc;
+      list-style-position: inside;
+      padding-left: 0;
+      margin-left: 0;
+    }
+
+    img.section-img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin: 12px 0;
+    }
+    header.hero {
+      position: relative;
+      color: #fff;
+      text-align: center;
+    }
+    .hero img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+    }
+    .hero .overlay {
+      background: rgba(0,0,0,0.55);
+      position: absolute;
+      inset: 0;
+    }
+    .hero .content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+    .hero h1 {
+      font-size: clamp(28px,4vw,42px);
+      margin: 0;
     }
   </style>
 </head>
 <body>
-
+  <!-- ======= HEADER START ======= -->
   <header>
     <div class="logo-section">
-      <img src="images/logo.png" alt="Company Logo" class="logo">
-      <span class="company-name">Southern Precision Industries</span>
+      <a href="index.html"><img src="images/logo.jpg" alt="Southern Precision Industries Logo"></a>
+      <h1>Southern Precision Industries</h1>
     </div>
-    <div class="contact">📞 +91 94441 91812</div>
-
-    <!-- Hamburger Menu -->
-    <div class="menu-toggle" onclick="toggleMenu()">
+    <div class="contact">
+      📞 <a href="tel:+919444191812" style="color: white; text-decoration: none;">+91 94441 91812</a>
+    </div>
+    <div class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('showing')">
       <span></span>
       <span></span>
       <span></span>
     </div>
-
-    <nav id="menu">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="facilities.html">Facilities</a></li>
-        <li><a href="clients.html">Clients</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
   </header>
 
-  <main style="padding: 20px;">
-    <h1>Our Manufacturing Facilities</h1>
-    <p>Southern Precision Industries houses advanced CNC and conventional machines, along with precision quality instruments to ensure high standards in every product manufactured.</p>
+  <!-- ======= NAVIGATION BAR ======= -->
+  <nav>
     <ul>
-      <li>CNC Turning Centers</li>
-      <li>CNC Vertical Machining Centers</li>
-      <li>Conventional Lathe Machines</li>
-      <li>Surface Grinding Machines</li>
-      <li>Coordinate Measuring Machines (CMM)</li>
-      <li>Profile Projectors</li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="mission-vision.html">Mission & Vision</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="facilities.html">Facilities</a></li>
+      <li><a href="clients.html">Clients</a></li>
+      <li><a href="contactus.html">Contact Us</a></li>
     </ul>
+  </nav>
+  <!-- ======= HEADER END ======= -->
+
+  <header class="hero">
+    <img src="images/facility-hero.jpg" alt="Southern Precision Industries Factory Building">
+    <div class="overlay"></div>
+    <div class="content">
+      <h1>Our Manufacturing Facilities</h1>
+      <p>Precision Infrastructure | Skilled Workforce | Quality Instruments</p>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2>Land & Building</h2>
+      <img src="images/factory-floor.jpg" alt="Factory floor and infrastructure" class="section-img">
+      <ul class="left-justified">
+        <li>Land Area: <strong>1200 Sq.ft</strong></li>
+        <li>Built-up Area (Ground): <strong>1000 Sq.ft</strong></li>
+        <li>Built-up Area (First Floor): <strong>500 Sq.ft</strong></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Utilities</h2>
+      <ul class="left-justified"><li>Power Supply: <strong>30 HP</strong></li></ul>
+    </section>
+
+    <section>
+      <h2>Production Capacity</h2>
+      <ul class="left-justified">
+        <li>Conventional Machining: <strong>42,000 machine hours/year</strong></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Conventional Machines</h2>
+      <ul class="left-justified">
+        <li>Center Lathes: 4</li>
+        <li>Shaping: 1</li>
+        <li>Drilling Machines: 1</li>
+        <li>Surface Grinding: 3</li>
+        <li>Milling Machines: 3</li>
+        <li>Cylindrical Grinding: 1</li>
+        <li>Jig Boring: 1</li>
+        <li>Cutting Machines: 2</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Our Skilled Workforce</h2>
+      <ul class="left-justified">
+        <li>Manager – 1</li>
+        <li>Supervisors – 1</li>
+        <li>Staff – 1</li>
+        <li>Machinists – 9</li>
+        <li>Fitters – 1</li>
+        <li>Trainees – 3</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Instrument & Equipment Facility</h2>
+      <img src="images/equipment.jpg" alt="Precision instruments and measuring equipment" class="section-img">
+      <ul class="left-justified">
+        <li>Height Master (450 mm) – 1 No</li>
+        <li>Dial Gauge Lever Type (0.002 mm) – 2 Nos</li>
+        <li>Dial Gauge Plunger Type (0.001 mm) – 2 Nos</li>
+        <li>Slip Gauge (Inspection Grade) – 1 Sets</li>
+        <li>Surface Plate 630 × 630 mm (Cast Iron) – 1 Nos</li>
+        <li>Dial Stand – 1 No</li>
+        <li>Micrometers 0–25 mm – 3 Nos</li>
+        <li>Micrometers 25–50 mm – 2 Nos</li>
+        <li>Micrometers 50–75 mm – 2 Nos</li>
+        <li>Micrometers 75–100 mm – 1 Nos</li>
+        <li>Micrometers (50–250 mm, sets) – 1 Nos each</li>
+        <li>Bore Dial Gauge (10–100 mm) – 1 Set</li>
+      </ul>
+    </section>
   </main>
 
-  <script>
-    function toggleMenu() {
-      document.getElementById("menu").classList.toggle("active");
-    }
-  </script>
-
+  <!-- ======= FOOTER START ======= -->
+  <footer>
+    <p>&copy; 2025 Southern Precision Industries. All Rights Reserved.</p>
+    <p>
+      📍 #55/3, Mariamman Koil Cross Street, Madhiyazhagan Nagar, Padi, Chennai, Tamil Nadu - 600050, India
+    </p>
+    <p>
+      📞 <a href="tel:+919444191812">+91 94441 91812</a> | 
+      ✉️ <a href="mailto:southernprecisionn@gmail.com">southernprecisionn@gmail.com</a>
+    </p>
+  </footer>
+  <!-- ======= FOOTER END ======= -->
 </body>
 </html>
