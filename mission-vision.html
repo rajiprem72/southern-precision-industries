@@ -3,22 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mission & Vision - Southern Precision Industries</title>
-  <meta name="description" content="Discover the mission and vision of Southern Precision Industries – delivering precision engineering, innovation, and quality-driven solutions for clients worldwide.">
-  <style>
-    :root{--accent:#0b5cff;--muted:#6b7280;--bg:#f7f8fb;font-family:Inter,system-ui,Arial}
-    body{margin:0;background:var(--bg);color:#111}
-    .container{max-width:1100px;margin:0 auto;padding:28px}
-    header.hero{position:relative;color:#fff;text-align:center}
-    .hero img{width:100%;height:420px;object-fit:cover}
-    .hero .overlay{background:rgba(0,0,0,0.55);position:absolute;inset:0}
-    .hero .content{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}
-    .hero h1{font-size:clamp(28px,4vw,42px);margin:0}
-    .section{background:#fff;margin-top:28px;padding:24px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
-    h2{color:var(--accent)}
-    footer{margin-top:36px;padding:28px;text-align:center;color:var(--muted)}
-    img.section-img{width:100%;height:300px;object-fit:cover;border-radius:10px;margin:12px 0}
-  </style>
+  <title>Facilities - Southern Precision Industries</title>
+  <meta name="description" content="Explore the state-of-the-art manufacturing facilities of Southern Precision Industries – CNC, conventional machines, and quality instruments ensuring precision engineering.">
 
   <style>
     body {
@@ -37,13 +23,14 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      position: relative;
     }
     .logo-section {
       display: flex;
       align-items: center;
     }
     .logo-section img {
-      height: 50px; /* adjust logo size */
+      height: 50px;
       margin-right: 15px;
     }
     .company-name {
@@ -53,20 +40,73 @@
     .phone-number {
       font-size: 16px;
     }
+    /* NAVIGATION */
     nav {
       background-color: #0055aa;
       padding: 10px 0;
       text-align: center;
     }
-    nav a {
+    nav ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    nav ul li {
+      margin: 0 15px;
+    }
+    nav ul li a {
       color: white;
       text-decoration: none;
-      margin: 0 15px;
       font-weight: bold;
     }
-    nav a:hover {
+    nav ul li a:hover {
       text-decoration: underline;
     }
+
+    /* HAMBURGER MENU */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 28px;
+      height: 20px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      position: absolute;
+      right: 20px;
+      top: 15px;
+    }
+    .menu-toggle span {
+      display: block;
+      height: 3px;
+      background: red; /* 🔴 red lines */
+      border-radius: 2px;
+    }
+
+    /* MOBILE VIEW */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        display: none;
+        background: #0055aa;
+        padding: 10px 0;
+      }
+      nav ul li {
+        margin: 10px 0;
+      }
+      .menu-toggle {
+        display: flex;
+      }
+      nav ul.show {
+        display: flex;
+      }
+    }
+
+    /* CONTENT */
     .content {
       flex: 1;
       padding: 40px 20px;
@@ -79,6 +119,8 @@
     h2 {
       color: #0055aa;
     }
+
+    /* FOOTER */
     footer {
       background-color: #003366;
       color: white;
@@ -86,6 +128,10 @@
       padding: 15px 10px;
       margin-top: auto;
       font-size: 14px;
+    }
+    footer a {
+      color: #ffcc00;
+      text-decoration: none;
     }
   </style>
 </head>
@@ -97,34 +143,48 @@
       <div class="company-name">Southern Precision Industries</div>
     </div>
     <div class="phone-number">📞 +91 94441 91812</div>
+    <button class="menu-toggle" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </header>
 
   <!-- Navigation Bar -->
   <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About Us</a>
-    <a href="mission-vision.html">Mission & Vision</a>
-    <a href="products.html">Products</a>
-    <a href="facilities.html">Facilities</a>
-    <a href="clients.html">Clients</a>
-    <a href="contactus.html">Contact Us</a>
+    <ul id="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="mission-vision.html">Mission & Vision</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="facilities.html">Facilities</a></li>
+      <li><a href="clients.html">Clients</a></li>
+      <li><a href="contactus.html">Contact Us</a></li>
+    </ul>
   </nav>
 
   <!-- Page Content -->
   <div class="content">
-    <h1>Mission & Vision</h1>
-    <h2>Our Mission</h2>
+    <h1>Our Facilities</h1>
     <p>
-      At Southern Precision Industries, our mission is to deliver world-class precision
-      engineering solutions that meet global standards. We are committed to providing
-      innovative, cost-effective, and sustainable products that exceed client expectations.
+      Southern Precision Industries is equipped with advanced manufacturing facilities 
+      to deliver precision-engineered products that meet international standards. 
+      Our state-of-the-art infrastructure ensures efficiency, quality, and innovation 
+      in every project we undertake.
     </p>
 
-    <h2>Our Vision</h2>
+    <h2>CNC & Conventional Machines</h2>
     <p>
-      Our vision is to become a trusted global leader in precision engineering by embracing
-      advanced technologies, ensuring uncompromised quality, and building long-term
-      relationships with our valued clients.
+      Our CNC and conventional machines allow us to achieve high accuracy and consistency 
+      in production. With the latest technology, we are capable of handling diverse 
+      engineering requirements with precision.
+    </p>
+
+    <h2>Quality Instruments</h2>
+    <p>
+      To maintain the highest quality standards, we employ advanced quality instruments 
+      for inspection and testing. Our focus on quality ensures reliability and 
+      customer satisfaction.
     </p>
   </div>
 
@@ -140,5 +200,14 @@
     </p>
   </footer>
   <!-- ======= FOOTER END ======= -->
+
+  <!-- SCRIPT -->
+  <script>
+    const toggle = document.querySelector(".menu-toggle");
+    const menu = document.getElementById("menu");
+    toggle.addEventListener("click", () => {
+      menu.classList.toggle("show");
+    });
+  </script>
 </body>
 </html>
