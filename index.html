@@ -8,6 +8,30 @@
   <meta name="keywords" content="Southern Precision Industries, precision engineering, Jigs, Fixtures, Tools, Gauges, Machining Components, Chennai manufacturing, automotive engineering solutions">
   <meta name="author" content="Southern Precision Industries">
   <style>
+    /* Default (desktop) – side by side */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+/* Mobile screens – stack vertically */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header .logo-section {
+    margin-bottom: 10px;
+  }
+
+  header .contact {
+    margin-top: 5px;
+  }
+}
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
