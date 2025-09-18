@@ -342,6 +342,19 @@ header.hero {
   font-size: clamp(28px, 4vw, 42px);
   margin: 0;
 }
+/* Mission & Vision page content */
+.content {
+  flex: 1;
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+h1 {
+  color: #003366;
+}
+h2 {
+  color: #0055aa;
+}
 
 
 }
