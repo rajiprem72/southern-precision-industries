@@ -114,9 +114,10 @@ header {
 
     /* Hamburger menu */
     .menu-toggle {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
+        display: flex; 
+        position: absolute;
+        top: 20px;
+        right: 20px;
     }
     .menu-toggle span {
       height: 4px;
@@ -135,9 +136,6 @@ header {
         text-align: center;
       }
       nav ul.showing {
-        display: flex;
-      }
-      .menu-toggle {
         display: flex;
       }
     }
