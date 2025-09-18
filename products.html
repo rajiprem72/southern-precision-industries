@@ -25,6 +25,30 @@
   <link rel="canonical" href="https://yourusername.github.io/Southern-Precision-Industries/products.html">
 
   <style>
+    /* Default (desktop) – side by side */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+/* Mobile screens – stack vertically */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header .logo-section {
+    margin-bottom: 10px;
+  }
+
+  header .contact {
+    margin-top: 5px;
+  }
+}
+
     header img {
         background: transparent;
         mix-blend-mode: multiply; /* removes white background visually */
