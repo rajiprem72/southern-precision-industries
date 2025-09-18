@@ -38,6 +38,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: relative;
     }
     header .logo-section {
       display: flex;
@@ -56,6 +57,8 @@
       font-size: 16px;
       font-weight: bold;
     }
+
+    /* Navigation */
     nav {
       background: #007bff;
       padding: 10px 0;
@@ -79,6 +82,37 @@
     nav ul li a:hover {
       color: #ffcc00;
     }
+
+    /* Hamburger menu */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    .menu-toggle span {
+      height: 4px;
+      width: 28px;
+      background: red; /* 🔴 red lines */
+      margin: 4px 0;
+      border-radius: 2px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        display: none;
+        background: #007bff;
+        text-align: center;
+      }
+      nav ul.showing {
+        display: flex;
+      }
+      .menu-toggle {
+        display: flex;
+      }
+    }
+
     main {
       padding: 50px 20px;
       max-width: 1100px;
@@ -171,6 +205,11 @@
     </div>
     <div class="contact">
       📞 <a href="tel:+919444191812" style="color: white; text-decoration: none;">+91 94441 91812</a>
+    </div>
+    <div class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('showing')">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
   </header>
 
