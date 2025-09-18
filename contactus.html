@@ -8,28 +8,11 @@
   <meta name="keywords" content="Southern Precision Industries contact, gauges manufacturer Chennai, precision machining Tamil Nadu, contact Southern Precision Industries, moulding inserts India">
   <meta name="author" content="Southern Precision Industries">
   <link rel="stylesheet" href="styles.css">
-   <style>
-    body { font-family: Arial, sans-serif; margin:0; padding:0; line-height:1.6; }
-    header { background: url('images/contact-banner.jpg') no-repeat center center/cover; color:white; text-align:center; padding:80px 20px; }
-    header h1 { font-size: 2.5rem; margin:0; }
-    header p { font-size: 1.2rem; margin-top:10px; }
-    section { padding: 50px 20px; max-width: 1100px; margin:auto; }
-    .contact-box { background:#f9f9f9; padding:30px; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.1); }
-    .contact-box h2 { margin-top:0; color:#222; }
-    .contact-item { margin:15px 0; font-size:1.1rem; }
-    .contact-item strong { color:#004080; }
-    iframe { width:100%; height:400px; border:0; margin-top:20px; border-radius:10px; }
-    footer { text-align:center; padding:20px; background:#222; color:white; margin-top:40px; }
-  </style>
-
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f4f8fc;
-      color: #333;
-    }
-    header {
+    body { font-family: Arial, sans-serif; margin:0; padding:0; line-height:1.6; background:#f4f8fc; color:#333; }
+
+    /* Top header with logo */
+    header.site-header {
       background: #0056b3;
       color: white;
       padding: 15px 30px;
@@ -37,26 +20,16 @@
       justify-content: space-between;
       align-items: center;
     }
-    header .logo-section {
-      display: flex;
-      align-items: center;
-    }
-    header img {
-      height: 60px;
-      margin-right: 15px;
-    }
-    header h1 {
-      font-size: 22px;
-      margin: 0;
-      font-weight: bold;
-    }
-    header .contact {
-      font-size: 16px;
-      font-weight: bold;
-    }
+    header.site-header .logo-section { display: flex; align-items: center; }
+    header.site-header img { height: 60px; margin-right: 15px; }
+    header.site-header h1 { font-size: 22px; margin: 0; font-weight: bold; }
+    header.site-header .contact { font-size: 16px; font-weight: bold; }
+
+    /* Navigation bar */
     nav {
       background: #007bff;
       padding: 10px 0;
+      position: relative;
     }
     nav ul {
       list-style: none;
@@ -65,64 +38,79 @@
       margin: 0;
       padding: 0;
     }
-    nav ul li {
-      margin: 0 20px;
-    }
+    nav ul li { margin: 0 20px; }
     nav ul li a {
       color: white;
       text-decoration: none;
       font-weight: bold;
       transition: color 0.3s ease;
     }
-    nav ul li a:hover {
-      color: #ffcc00;
+    nav ul li a:hover { color: #ffcc00; }
+
+    /* Hamburger menu button */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      position: absolute;
+      top: 12px;
+      right: 20px;
     }
-    main {
-      padding: 50px 20px;
-      max-width: 1100px;
-      margin: auto;
-      text-align: center;
+    .menu-toggle span {
+      display: block;
+      width: 28px;
+      height: 3px;
+      margin: 5px 0;
+      background: red; /* 🔴 red hamburger lines */
+      border-radius: 2px;
     }
-    main h2 {
-      color: #0056b3;
-      margin-bottom: 20px;
+
+    /* Mobile responsive */
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background: #007bff;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+      }
+      nav ul.active { display: flex; }
+      .menu-toggle { display: flex; }
     }
-    main p {
-      font-size: 18px;
-      line-height: 1.8;
+
+    /* Banner header */
+    .page-header {
+      background: url('images/contact-banner.jpg') no-repeat center center/cover;
+      color:white;
+      text-align:center;
+      padding:80px 20px;
     }
-    .cta {
-      margin-top: 30px;
+    .page-header h1 { font-size: 2.5rem; margin:0; }
+    .page-header p { font-size: 1.2rem; margin-top:10px; }
+
+    section { padding: 50px 20px; max-width: 1100px; margin:auto; }
+    .contact-box {
+      background:#f9f9f9;
+      padding:30px;
+      border-radius:10px;
+      box-shadow:0 2px 8px rgba(0,0,0,0.1);
     }
-    .cta a {
-      display: inline-block;
-      background: #0056b3;
-      color: white;
-      padding: 12px 25px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s ease;
-    }
-    .cta a:hover {
-      background: #003d80;
-    }
-    footer {
-      background: #333;
-      color: white;
-      padding: 20px 0;
-      text-align: center;
-      margin-top: 40px;
-    }
-    footer a {
-      color: #ffcc00;
-      text-decoration: none;
-    }
+    .contact-box h2 { margin-top:0; color:#222; }
+    .contact-item { margin:15px 0; font-size:1.1rem; }
+    .contact-item strong { color:#004080; }
+    iframe { width:100%; height:400px; border:0; margin-top:20px; border-radius:10px; }
+
+    footer { text-align:center; padding:20px; background:#222; color:white; margin-top:40px; }
+    footer a { color:#ffcc00; text-decoration: none; }
   </style>
 </head>
 <body>
-    <!-- ======= HEADER START ======= -->
-  <header>
+  <!-- ======= HEADER START ======= -->
+  <header class="site-header">
     <div class="logo-section">
       <a href="index.html"><img src="images/logo.jpg" alt="Southern Precision Industries Logo"></a>
       <h1>Southern Precision Industries</h1>
@@ -134,7 +122,12 @@
 
   <!-- ======= NAVIGATION BAR ======= -->
   <nav>
-    <ul>
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul id="menu">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About Us</a></li>
       <li><a href="mission-vision.html">Mission & Vision</a></li>
@@ -146,11 +139,13 @@
   </nav>
   <!-- ======= HEADER END ======= -->
 
-  <header>
+  <!-- ======= PAGE HERO ======= -->
+  <div class="page-header">
     <h1>Contact Southern Precision Industries</h1>
     <p>We are here to help you with precision solutions – reach us anytime.</p>
-  </header>
+  </div>
 
+  <!-- ======= CONTACT DETAILS ======= -->
   <section>
     <div class="contact-box">
       <h2>Our Office</h2>
@@ -162,8 +157,8 @@
       <div class="contact-item"><strong>Google Maps:</strong> <a href="https://maps.app.goo.gl/aeDqaUbjZgajdXbB9" target="_blank">View Location</a></div>
     </div>
     <h2>Southern Precision Industries</h2>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3886.0700021000857!2d80.17975!3d13.094750000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTPCsDA1JzQxLjEiTiA4MMKwMTAnNDcuMSJF!5e0!3m2!1sen!2sin!4v1758090187174!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </section>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3886.0700021000857!2d80.17975!3d13.094750000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTPCsDA1JzQxLjEiTiA4MMKwMTAnNDcuMSJF!5e0!3m2!1sen!2sin!4v1758090187174!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </section>
 
   <!-- ======= FOOTER START ======= -->
   <footer>
@@ -177,5 +172,14 @@
     </p>
   </footer>
   <!-- ======= FOOTER END ======= -->
+
+  <!-- ======= JS for menu toggle ======= -->
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+    menuToggle.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
