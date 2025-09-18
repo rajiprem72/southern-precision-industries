@@ -39,6 +39,7 @@
     nav {
       background: #007bff;
       padding: 10px 0;
+      position: relative;
     }
     nav ul {
       list-style: none;
@@ -59,6 +60,46 @@
     nav ul li a:hover {
       color: #ffcc00;
     }
+
+    /* ===== Mobile Menu ===== */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height: 22px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      position: absolute;
+      top: 12px;
+      right: 20px;
+    }
+    .menu-toggle span {
+      display: block;
+      height: 4px;
+      background: red;  /* 🔴 red hamburger lines */
+      border-radius: 2px;
+    }
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background: #007bff;
+        width: 100%;
+        text-align: center;
+      }
+      nav ul.showing {
+        display: flex;
+      }
+      nav ul li {
+        margin: 15px 0;
+      }
+      .menu-toggle {
+        display: flex;
+      }
+    }
+
     main {
       padding: 50px 20px;
       max-width: 1100px;
@@ -144,7 +185,12 @@
 
   <!-- ======= NAVIGATION BAR ======= -->
   <nav>
-    <ul>
+    <button class="menu-toggle" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul id="menu">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About Us</a></li>
       <li><a href="mission-vision.html">Mission & Vision</a></li>
@@ -155,7 +201,6 @@
     </ul>
   </nav>
   <!-- ======= HEADER END ======= -->
-
 
   <!-- Page Content -->
   <div class="content">
@@ -185,5 +230,14 @@
     </p>
   </footer>
   <!-- ======= FOOTER END ======= -->
+
+  <!-- ======= SCRIPT FOR MENU ======= -->
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('#menu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('showing');
+    });
+  </script>
 </body>
 </html>
